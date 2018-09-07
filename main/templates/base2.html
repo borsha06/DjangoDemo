@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    {% block extrahead %}
+
+    {% endblock %}
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div class="main-panel">
+
+
+        <div class="content">
+            <div class="container-fluid">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+<footer class="footer">
+    <div class="container-fluid">
+
+        <p class="copyright pull-right">
+            &copy; 2018 <a href="http://itsd.com.bd">ITSD</a>
+        </p>
+    </div>
+</footer>
+
+    </div>
+</div>
+
+</body>
+
+
+{% block script %}
+{% endblock %}
+
+</html>
