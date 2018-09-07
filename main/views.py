@@ -6,4 +6,5 @@ class Main(View):
     def get(self, request):
         a = "hello django"
         b = "base2.html"
-        return render(request, 'base.html', {'message': a, 'value': b})
+        lists = [1,2,3,4,5]
+        return render(request, 'base.html', {'message': a, 'value': b, 'list': lists})
