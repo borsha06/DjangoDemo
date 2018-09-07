@@ -2,7 +2,9 @@
 {% block content %}
 {{ message }}
 {% for i in list %}
+{% if i != 5 %}
 {{i}}
+{% endif %}
 {% endfor %}
 
 {% endblock %}
