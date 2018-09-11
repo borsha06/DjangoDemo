@@ -1,10 +1,12 @@
 {% extends value %}
+{% load filter_new %}
 {% load static %}
 {% block content %}
 {{ message }}
 
  <div class="data">
                 </div>
+{{ get_class}}
 
 {% endblock %}
 {% block script %}
