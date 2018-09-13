@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views import View
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
 
 class Main(View):
@@ -11,3 +13,12 @@ class Main(View):
 
     def post(self, request):
         return render(request, 'base.html', {})
+
+
+class UploadAPI(APIView):
+    def get(self, request, format=None, *args, **kwargs):
+        return Response()
+
+    def post(self, request, format=None, *args, **kwargs):
+        print(request.data)
+        return Response()
