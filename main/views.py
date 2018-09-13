@@ -21,4 +21,4 @@ class UploadAPI(APIView):
 
     def post(self, request, format=None, *args, **kwargs):
         print(request.data)
-        return Response()
+        return Response(data={})
