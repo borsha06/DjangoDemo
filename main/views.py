@@ -8,3 +8,6 @@ class Main(View):
         b = "base2.html"
         lists = [1, 2, 3, 4, 5]
         return render(request, 'base.html', {'message': a, 'value': b, 'list': lists})
+
+    def post(self, request):
+        return render(request, 'base.html', {})
