@@ -32,7 +32,7 @@ $(document).ready(function() {
                     var options ="<option value='0'>-------</option>";
 
                     $('#district option').each(function(){
-                        ($this).remove();
+                        $(this).remove();
                     });
 
                     for (var i = 0; i < data.length; i++) {
@@ -61,7 +61,7 @@ $(document).ready(function() {
                     var options ="<option value='0'>-------</option>";
 
                     $('#district option').each(function(){
-                        ($this).remove();
+                        $(this).remove();
                     });
 
                     for (var i = 0; i < data.length; i++) {
@@ -92,7 +92,7 @@ $('#thana').on('change', function(){
                 var options ="<option value='0'>-------</option>";
 
                 $('#thana option').each(function(){
-                    ($this).remove();
+                    $(this).remove();
                 });
 
                 for (var i = 0; i < data.length; i++) {
