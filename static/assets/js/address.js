@@ -60,7 +60,7 @@ $(document).ready(function() {
 
                     var options ="<option value='0'>-------</option>";
 
-                    $('#district option').each(function(){
+                    $('#thana option').each(function(){
                         $(this).remove();
                     });
 
@@ -91,7 +91,7 @@ $('#thana').on('change', function(){
 
                 var options ="<option value='0'>-------</option>";
 
-                $('#thana option').each(function(){
+                $('#postal option').each(function(){
                     $(this).remove();
                 });
 
