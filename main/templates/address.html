@@ -1,0 +1,30 @@
+{% extends value %}
+{% load filter_new %}
+{% load static %}
+
+
+{% block content %}
+
+<select id="division" >
+    <option class="division" value="1" selected>-------</option>
+</select>
+
+<select id="district" >
+    <option class="district" value="1" selected>-------</option>
+</select>
+<select id="thana" >
+    <option class="thana" value="1" selected>-------</option>
+</select>
+<select id="postal" >
+    <option class="postal" value="1" selected>-------</option>
+</select>
+{% endblock %}
+
+{% block script %}
+<script
+        src="{% static 'assets/js/jquery.min.js' %}" type="text/javascript">
+</script>
+<script src="{% static 'assets/js/address.js' %}">
+</script>
+
+{% endblock %}
