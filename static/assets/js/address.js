@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('#division').on('change', function(){
         var division = $(this).val();
         console.log(division);
-        if(division !== "1" ){
+        if(division !== "0" ){
 
             $.ajax({
             url: 'http://45.33.76.177:8500/address/districts/',
@@ -34,7 +34,7 @@ $(document).ready(function() {
                 //var result = $('select').find('option');
                 console.log(data);
                 var options ="";
-                 $('option').find('#district').remove().end();
+                 $('select #district').children('option:not(:first)').remove();
                  for (var i = 0; i < data.length; i++) {
                  options += "<option value="+data[i]+">" + data[i] + "</option>";
             }
@@ -48,7 +48,7 @@ $(document).ready(function() {
     $('#district').on('change', function(){
         var district = $(this).val();
 
-        if(district !== "1" )
+        if(district !== "0" )
         {
         $.ajax({
         url: 'http://45.33.76.177:8500/address/thanas/',
@@ -63,7 +63,7 @@ $(document).ready(function() {
         var options ="";
 
         for (var i = 0; i < data.length; i++) {
-        $('option').find('#thana').remove().end();
+      $('select #thana').children('option:not(:first)').remove();
         options += "<option value="+data[i]+">" + data[i] + "</option>";
         }
         $("#thana").append(options);
@@ -82,7 +82,7 @@ $(document).ready(function() {
     var thana = $(this).val();
     var district = $('#district').val();
 
-     if(thana !== "1" )
+     if(thana !== "0" )
         {
             $.ajax({
                 url: 'http://45.33.76.177:8500/address/postal-code/',
@@ -97,7 +97,7 @@ $(document).ready(function() {
         var options ="";
 
         for (var i = 0; i < data.length; i++) {
-        $('option').find('#postal').remove().end();
+        $('select #postal').children('option:not(:first)').remove();
         options += "<option value="+data[i]+">" + data[i] + "</option>";
         }
         $("#postal").append(options);
