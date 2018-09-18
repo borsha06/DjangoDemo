@@ -31,7 +31,7 @@ $(document).ready(function() {
 
                     var options ="<option value='0'>-------</option>";
 
-                    $('#district option').each(function(){
+                    $('#district option ').each(function(){
                         $(this).remove();
                     });
 
@@ -46,6 +46,7 @@ $(document).ready(function() {
 
     $('#district').on('change', function(){
         var district = $(this).val();
+            var division= $('#division').val();
 
         if(district !== "0" )
         {
